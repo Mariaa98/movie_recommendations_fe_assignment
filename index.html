@@ -19,82 +19,176 @@
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
+		
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+  <link href="multiselect.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  
 
 	</head>
 
-	<body onload="getRandomMedia()">
-		
+	<body onload="getRandomMedia()" background="foto4.jpg" >
+	
+					
+		<!--adding nav bar-->
 
-		<div id="site-content">
-			<header class="site-header">
-				<div class="container">
+         <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+           <a class="navbar-brand" href="http://think-big.solutions/" id="branding"><img src="logo.png" width="100" height="60" alt="" class="logo">
+            </a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+       <div id="navb" class="navbar-collapse collapse hide">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+             <a class="nav-link" href="#">Home</a>
+          </li>
+      
+      
+       </ul>
 
-					<!-- ThinkBIG Logo Start-->
-					<a href="http://think-big.solutions/" id="branding">
-						<img src="logo.png" width="130" height="100" alt="" class="logo">
-					</a>
-					<!-- ThinkBIG Logo End-->
+       <ul class="nav navbar-nav ml-auto">
+         <li class="nav-item">
+          <a class="nav-link" href="try.html"><span class="fas fa-user"></span> Sign Up</a>
+        </li>
+         
+        </ul>
+      </div>
+     </nav>
+	 
+	 
+	 <!----adding slideshow-->
+	 
+	 <div class="slideshow-container">
 
-					<!-- Subscribe START-->
-					<div class="col-md-2" style="float: right">
-						<div class="contact-form">
-							<input type="submit"
-								   disabled=disabled
-								   value="Subscribe"
-								   style="display: block; margin-bottom:14px; width: 100%; height:90px ">
-						</div>
-					</div>
-					<!-- Subscribe End-->
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 2</div>
+    <img src="img22.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
 
-					<!-- EMAIL & Authentication Token Handling START-->
-					<div class="col-md-2" style="float: right">
-						<div class="contact-form">
-							<input type="submit" value="Send Auth Token"
-								   style="display: block; margin-bottom:
-									   14px; width: 100%">
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="img33.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
 
-							<input type="submit" value="Test Auth Token"
-								   style="display: block; width: 100%">
-						</div>
-					</div>
+  
 
-					<div class="col-md-5" style="float: right">
-						<div class="contact-form">
-							<input id="email_input" type="text" class="email" placeholder="enter your email">
-							<input id="token_input" type="text" class="email" placeholder="enter your verification token">
-						</div>
-					</div>
-					<!-- EMAIL & Authentication Token Handling END-->
-				</div>
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
 
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 1000); // Change image every 2 seconds
+}
+</script>
+	  
+	 
 			</header>
+			
+			
+			
+			
+					<!-- Subscribe End-->
+					
+					<!-- EMAIL & Authentication Token Handling END-->
+			
+			<!-- Slideshow container -->
+
+
+			
+			
+			
 
 
 			<main class="main-content">
+			
 				<div class="container">
 					<div class="page">
 
 
 						<div class="filters">
-							<select name="#" id="#" placeholder="Choose Category">
-								<option value="#">Action</option>
-								<option value="#">Drama</option>
-								<option value="#">Fantasy</option>
-								<option value="#">Horror</option>
-								<option value="#">Adventure</option>
-							</select>
-							<select name="#" id="#">
-								<option value="#">2012</option>
-								<option value="#">2013</option>
-								<option value="#">2014</option>
-							</select>
+						
 
+							
 							<form class="search-form" style="float: right">
 								<input id="search_input" type="text" placeholder="Search...">
 								<button type="button"><i class="fa fa-search"></i></button>
 							</form>
-						</div>
+						
+						<ul id="myUL">
+           <li><span  class="box"style="font-size: 250%" ><b> Choose category<b></span>
+            <ul class="nested">
+     
+                           <label for="one"><input type="checkbox" id="one"/>Drama</label>
+						   <label for="two"><input type="checkbox" id="two"/>fantasy</label>
+						    <label for="three"><input type="checkbox" id="three"/>horror</label>
+							 <label for="four"><input type="checkbox" id="four"/>advanture</label>
+          </ul>
+      </li>
+</ul>
+      <ul id="myUL">
+       <li><span class="box" style="font-size: 250%">years</span>
+          <ul class="nested">
+     
+                       <label for="on"><input type="checkbox" id="on"/>2012</label>
+					   <label for="tw"><input type="checkbox" id="tw"/>2013</label>
+					   <label for="thre"><input type="checkbox" id="thre"/>2014</label>
+					   <label for="fou"><input type="checkbox" id="fou"/>2015</label>
+         </ul>
+       </li>
+   </ul>
+ <script>
+ var toggler = document.getElementsByClassName("box");
+ var i;
 
+ for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("check-box");
+  });
+ }
+ </script>
+						</div>
+						
+						
+                        
 
 						<div id="media" class="movie-list">
 
